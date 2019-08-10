@@ -1,0 +1,644 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.riddles {
+    width: 100%;
+    max-width: 800px;
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: #4b4d31 url("image/beige-paper.png");
+}
+
+.riddles--hidden {
+    display: none;
+}
+
+/*======BACK=============*/
+
+.back__riddles {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.back__riddles img {
+    width: 20px;
+    height: 20px;
+}
+
+.back__riddles:hover img, .back__riddles:focus img {
+    transform: scale(1.5);
+}
+
+.btn {
+    outline: none;
+}
+
+.screens-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.screen {
+    width: 90%;
+    height: 300px;
+    background: white;
+    margin-top: 30px;
+    border-radius: 85px;
+    padding: 20px 45px;
+    margin-bottom: 30px;
+}
+
+.hint__screen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 90%;
+    height: content-box;
+    min-height: 100px;
+    background: #cacaca;
+    margin-top: 30px;
+    border-radius: 85px;
+    padding: 20px 45px;
+    margin-bottom: 30px;
+    text-align: center;
+    vert-align: middle;
+}
+
+.control {
+    width: 90%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn {
+    box-shadow: 5px 2px 4px 1px black;
+}
+
+.text__answer {
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #dadada;
+    border: none;
+    outline: none;
+    box-shadow: 5px 2px 4px 1px black;
+}
+
+.text__answer:hover {
+    background: #ffffff;
+}
+
+.text__answer:focus {
+    border: 1px solid #009a00;
+}
+
+.answer {
+    border: 1px solid #24810c;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: #29940e;
+    cursor: pointer;
+}
+
+.answer:hover {
+    color: white;
+    background: #24810c;
+    border: 1px solid #fcfcfc;
+    transition: 0.2s;
+}
+
+.answer:focus {
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+.hint {
+    border: 1px solid #1b3faa;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: #1c41b0;
+    cursor: pointer;
+}
+
+.hint:hover {
+    color: white;
+    background: #16338b;
+    border: 1px solid #fcfcfc;
+    transition: 0.2s;
+}
+
+.hint:focus {
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+.showAnswer {
+    border: 1px solid #8e1209;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: #b0160c;
+    cursor: pointer;
+}
+
+.showAnswer:hover {
+    color: white;
+    background: #96130a;
+    border: 1px solid #fcfcfc;
+    transition: 0.2s;
+}
+
+.showAnswer:focus {
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+/*==============================*/
+
+.answer__right {
+    background: #30961d;
+    color: white;
+}
+
+.answer__not {
+    background: #bd2224;
+    color: white;
+}
+
+.hint__screen__class {
+    background: #cacaca;
+    color: black;
+}
+
+
+/*******************************/
+
+.ignore-riddles {
+    border: 1px solid #733359;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: #8e3f6e;
+    cursor: pointer;
+}
+
+.ignore-riddles:hover {
+    color: white;
+    background: #6b2f53;
+    border: 1px solid #fcfcfc;
+    transition: 0.2s;
+}
+
+.ignore-riddles:focus {
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+/*  startPage =========================================*/
+
+.startPage {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    max-height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-image: linear-gradient(45deg, green, #7b7b4c, #d29d9d, #6f6fcb);
+}
+
+.startPage__title {
+    margin: 50px auto;
+    font-size: 110px;
+    text-shadow: #633a3a 5px 2px 9px;
+}
+
+.startPage__tobegin-riddles-button {
+    margin-bottom: 50px;
+    margin-top: 100px;
+    padding: 10px 15px;
+    background: #24810c;
+    border: 1px solid #1f6e0a;
+    font-size: 90px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 11px 11px 7px 1px #225215;
+    outline: none;
+}
+
+.startPage__tobegin-riddles-button:hover, .startPage__tobegin-riddles-button:focus {
+    background: #1f6e0a;
+    transition: 0.2s;
+}
+
+.startPage__add-ridle-button {
+    margin-bottom: 80px;
+    padding: 10px 20px;
+    background: #cbb315;
+    border: 1px solid #9b8910;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 11px 11px 7px 1px #695c08;
+    outline: none;
+}
+
+.startPage__add-ridle-button:hover, .startPage__add-ridle-button:focus {
+    background: #a69212;
+    transition: 0.2s;
+}
+
+/*=====addRiddlePage======================*/
+
+.addRiddlePage {
+    width: 100%;
+    max-width: 800px;
+    background: #4b4d31 url("image/asfalt-light.png");
+    padding-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.textAddRiddleH1 {
+    margin-bottom: 30px;
+    font-size: 48px;
+    opacity: 0;
+}
+
+.formRiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@keyframes strasching {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.textAddRiddleH1--show {
+    /*visibility: visible;*/
+    animation-name: strasching;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    color: #38cb13;
+}
+
+/* back===================*/
+
+.addRiddlePage__back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.addRiddlePage__back img {
+    width: 20px;
+    height: 20px;
+}
+
+.addRiddlePage__back img:hover {
+    transform: scale(1.5);
+}
+
+.addRiddlePage--hidden {
+    display: none;
+}
+
+.writeRiddle {
+    padding: 15px;
+    margin-bottom: 30px;
+    resize: none;
+    outline: none;
+    border-radius: 8px;
+    width: 90%;
+    font-size: 18px;
+    border: 1px solid lightgray;
+    transition: all 0.3s;
+}
+
+.writeRiddle:focus, .writeRiddle:hover {
+    border-color: #00bf00;
+}
+
+.writeHint {
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    width: 90%;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    transition: all 0.3s;
+}
+
+.writeHint:focus {
+    border-color: #00bf00;
+}
+
+.writeAnswer {
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    width: 90%;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    transition: all 0.3s;
+}
+
+.writeAnswer:focus {
+    border-color: #00bf00;
+}
+
+.addCreatedRiddleButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-bottom: 60px;
+
+    background: #32b712;
+    border: 1px #28910e;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 7px 8px 1px #0f330f;
+    outline: none;
+}
+
+.addCreatedRiddleButton:hover, .addCreatedRiddleButton:focus {
+    background: #2b9c0f;
+    border: 1px #28910e;
+}
+
+/*====JS=================*/
+
+.blockHidden {
+    display: none;
+}
+
+.riddles__show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*   media-768   */
+
+@media (max-width: 768px) {
+    .startPage {
+        border-radius: 8px;
+    }
+
+    .riddles {
+        height: 100vh;
+        margin: 0;
+        padding: 0 20px;
+        border-radius: 8px;
+    }
+
+    .control {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /*   addRiddlePage   */
+
+    .addRiddlePage {
+        height: 100vh;
+        border-radius: 8px;
+    }
+
+    .textAddRiddleH1 {
+        font-size: 80px;
+    }
+
+    .writeRiddle {
+        height: 230px;
+    }
+
+    .writeHint {
+        height: 60px;
+    }
+
+    .writeAnswer {
+        height: 60px;
+    }
+
+    .addCreatedRiddleButton {
+        padding: 25px 40px;
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 414px) {
+    /*   startPage   */
+    .startPage__title {
+        font-size: 70px;
+        margin: 20px auto;
+    }
+
+    .startPage__tobegin-riddles-button {
+        margin: 10px 10px;
+        padding: 10px;
+        font-size: 45px;
+    }
+
+    .startPage__add-ridle-button {
+        margin-bottom: 40px;
+        padding: 10px;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    /*   riddles   */
+
+    .riddles {
+        padding: 0;
+    }
+
+    .screen {
+    }
+
+    .hint__screen {
+        min-height: 50px;
+    }
+
+    .control {
+        flex-wrap: wrap;
+    }
+
+    .text__answer {
+        width: 323px;
+        margin-bottom: 60px;
+    }
+
+    /*   addRiddlePage   */
+
+    .textAddRiddleH1 {
+        font-size: 28px;
+    }
+
+    .writeRiddle {
+        width: 300px;
+    }
+
+    .writeHint {
+        width: 300px;
+    }
+
+    .writeAnswer {
+        width: 300px;
+    }
+}
+
+/*   media-320   */
+
+@media (max-width: 320px) {
+    /*   startPage   */
+
+    .startPage {
+        border-radius: 8px;
+        margin: 0;
+    }
+
+    .startPage__title {
+        font-size: 70px;
+        margin: 20px auto;
+    }
+
+    .startPage__tobegin-riddles-button {
+        margin: 10px 10px;
+        padding: 10px;
+        font-size: 45px;
+    }
+
+    .startPage__add-ridle-button {
+        margin-bottom: 40px;
+        padding: 10px;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    /*   riddles   */
+
+    .screen {
+        height: 120px;
+    }
+
+    .hint__screen {
+        height: 50px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: -125px;
+        margin: auto;
+    }
+
+    .control {
+        flex-wrap: wrap;
+    }
+
+    .text__answer {
+        width: 90%;
+        margin-bottom: 60px;
+    }
+
+    /*   addRiddlePage   */
+
+    .textAddRiddleH1 {
+        font-size: 28px;
+    }
+
+    .writeRiddle {
+        width: 300px;
+    }
+
+    .writeHint {
+        width: 300px;
+    }
+
+    .writeAnswer {
+        width: 300px;
+    }
+
+    .addCreatedRiddleButton {
+        padding: 15px 25px;
+        font-size: 12px;
+    }
+}

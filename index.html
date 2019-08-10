@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>riddles</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="startPage">
+    <h1 class="startPage__title">Загадки</h1>
+    <button class="startPage__tobegin-riddles-button">Начать</button>
+    <button class="startPage__add-ridle-button">Добавить загадку</button>
+</div>
+<div class="riddles riddles--hidden">
+    <div class="screens-wrapper">
+        <div class="screen ">Нажмите красную кнопку 'ИГРАТЬ'
+        </div>
+
+        <div class="hint__screen">
+        </div>
+    </div>
+
+    <div class="control">
+        <input class="text__answer" type="text" placeholder="ваш ответ?">
+
+        <button class="answer btn" disabled="disabled">ответить</button>
+        <button class="hint btn" disabled="disabled">подсказка</button>
+        <button class="ignore-riddles btn" disabled="disabled">след</button>
+        <button class="showAnswer btn">показать ответ</button>
+
+    </div>
+
+    <button class="back__riddles ">
+        <img src="image/back-arrow.png" alt="back">
+    </button>
+</div>
+
+<div class="addRiddlePage addRiddlePage--hidden">
+    <h2 class="textAddRiddleH1">Загадка добавлена</h2>
+    <form class="formRiddle">
+        <textarea class="writeRiddle writeRiddle--addRiddle" rows="5" cols="100" placeholder="Загадка"
+              required>
+        </textarea>
+        <input class="writeHint" placeholder="Подсказка" type="text" required>
+        <input class="writeAnswer" placeholder="Ответ" type="text" required>
+        <button type="submit" class="addCreatedRiddleButton">Добавить загадку</button>
+    </form>
+
+    <button class="addRiddlePage__back">
+        <img src="image/back-arrow.png" alt="back">
+    </button>
+
+</div>
+<script src="js.js"></script>
+
+</body>
+</html>
