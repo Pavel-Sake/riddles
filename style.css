@@ -527,6 +527,7 @@ body {
         padding: 10px;
         font-size: 15px;
         margin-top: 20px;
+        border-radius: 0;
     }
 
     /*   riddles   */
@@ -551,20 +552,16 @@ body {
 
     /*   addRiddlePage   */
 
+    .addRiddlePage {
+        border-radius: 0;
+    }
+
     .textAddRiddleH1 {
         font-size: 28px;
     }
 
     .writeRiddle {
-        height: 150px;
-    }
-
-    .writeHint {
-        width: 300px;
-    }
-
-    .writeAnswer {
-        width: 300px;
+        height: 100px;
     }
 }
 
@@ -628,7 +625,7 @@ body {
     }
 
     .writeRiddle {
-        height: 100px;
+        height: 80px;
     }
 
     .writeHint {
