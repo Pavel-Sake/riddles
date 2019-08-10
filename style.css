@@ -556,7 +556,7 @@ body {
     }
 
     .writeRiddle {
-        width: 150px;
+        height: 150px;
     }
 
     .writeHint {
@@ -628,7 +628,7 @@ body {
     }
 
     .writeRiddle {
-        width: 150px;
+        height: 100px;
     }
 
     .writeHint {
