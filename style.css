@@ -27,6 +27,7 @@ body {
     width: 100%;
     max-width: 800px;
     min-height: 500px;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -76,7 +77,9 @@ body {
 
 .screen {
     width: 90%;
-    height: 300px;
+    height: auto;
+    min-height: 50px;
+    max-height: 300px;
     background: white;
     margin-top: 30px;
     border-radius: 85px;
@@ -531,9 +534,6 @@ body {
         padding: 0;
     }
 
-    .screen {
-    }
-
     .hint__screen {
         min-height: 50px;
     }
@@ -597,7 +597,7 @@ body {
     /*   riddles   */
 
     .screen {
-        height: 120px;
+        max-height: 120px;
     }
 
     .hint__screen {
